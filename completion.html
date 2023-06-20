@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Progress Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
+    h2 {
+      margin-bottom: 10px;
+    }
+    
+    .progress-tracker {
+      width: 100%;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      overflow: hidden;
+      height: 20px;
+    }
+    
+    .progress-tracker .progress-bar {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #4CAF50;
+      color: #ffffff;
+      position: relative;
+    }
+    
+    .progress-tracker .progress-bar .progress-text {
+      padding: 0 10px;
+    }
+    
+    .progress-tracker .progress-bar::after {
+      content: attr(data-progress);
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      color: #ffffff;
+    }
+    
+    .progress-tracker .progress-bar .not-completed {
+      background-color: #e0e0e0;
+    }
+    
+    .progress-tracker .progress-bar .completed {
+      background-color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <h2>Progress Tracker</h2>
+  <div class="progress-tracker">
+    <div class="progress-bar" style="width: 75%;"">
+      <span class="progress-text"> 75% Complete</span>
+    </div>
+
+  </div>
+</body>
+</html>
